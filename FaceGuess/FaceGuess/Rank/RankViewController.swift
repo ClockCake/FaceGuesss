@@ -10,8 +10,9 @@ class RankViewController: WebViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.snp.remakeConstraints { make in
-            make.leading.trailing.bottom.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
             make.top.equalToSuperview().offset(kStatusBarHeight)
+            make.bottom.equalToSuperview().offset(-(kTabBarHeight))
         }
         customNavBar.isHidden = true
 

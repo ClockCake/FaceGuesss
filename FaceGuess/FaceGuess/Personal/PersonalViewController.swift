@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import StoreKit
+import RxGesture
 class PersonalViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     override func viewDidLoad() {
@@ -23,6 +24,10 @@ class PersonalViewController: BaseViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(100)
         }
+        baseInfo.rx.tapGesture().when(.recognized).withUnretained(self).subscribe(onNext: { _ in
+            let vc = PersonalEditViewController(title: "个人设置", isShowBack: true)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }).disposed(by: disposeBag)
         
         let avatorBtn = UIImageView(image: UIImage(named: "2"))
         avatorBtn.layer.cornerRadius = 30

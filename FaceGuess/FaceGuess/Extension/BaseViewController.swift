@@ -20,6 +20,10 @@ class BaseViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
  
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent // 设置为你需要的样式
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if self.navigationController?.viewControllers.count ?? 0 > 1{
@@ -47,22 +51,12 @@ class BaseViewController: UIViewController {
 
         // 添加到视图
         customNavBar.snp.makeConstraints { make in
-            make.top.leading.trailing.equalToSuperview()
-            make.height.equalTo(kNavBarAndStatusBarHeight)
+            make.leading.trailing.equalToSuperview()
+            make.top.equalToSuperview().offset(kStatusBarHeight)
+            make.height.equalTo(kNavBarHeight)
         }
         
-        // 获取状态栏高度
-        var statusBarHeight: CGFloat = 0
-        if #available(iOS 13.0, *) {
-            let window = UIApplication.shared.windows.first { $0.isKeyWindow }
-            statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
-        } else {
-            statusBarHeight = UIApplication.shared.statusBarFrame.height
-        }
-        
-        // 考虑状态栏的高度
-        customNavBar.frame.origin.y = statusBarHeight
-        
+
         let backButton = UIButton.init()
         customNavBar.addSubview(backButton)
         backButton.rx.tap.withUnretained(self).subscribe(onNext: { _ in

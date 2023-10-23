@@ -67,7 +67,7 @@ class ActivityDetailViewController: BaseViewController {
             make.height.equalTo(34)
         }
         
-        let imageView = UIImageView(image: UIImage(named: "1"))
+        let imageView = UIImageView(image: UIImage(named: "2"))
         imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
         bgView.addSubview(imageView)

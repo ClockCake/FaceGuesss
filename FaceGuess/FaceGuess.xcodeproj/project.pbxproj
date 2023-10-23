@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 087BC4AE2AE63D8700AF725A /* RxGesture */; };
+		087BC4B12AE63E3900AF725A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 087BC4B02AE63E3900AF725A /* RxGesture */; };
+		087BC4B32AE64AEF00AF725A /* TextDislogVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */; };
+		087BC4B52AE6602700AF725A /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4B42AE6602700AF725A /* LocationView.swift */; };
 		D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */; };
 		D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CD2AE36F55006CBBE4 /* WebViewController.swift */; };
 		D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CF2AE37492006CBBE4 /* MainTabController.swift */; };
@@ -33,20 +37,17 @@
 		D690908C2AE354FE00F7FE2E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69090892AE354FE00F7FE2E /* Screen.swift */; };
 		D690908E2AE3558300F7FE2E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690908D2AE3558300F7FE2E /* LoginViewController.swift */; };
 		D69090912AE3560900F7FE2E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D69090902AE3560900F7FE2E /* RxBlocking */; };
-		D69090932AE3560900F7FE2E /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D69090922AE3560900F7FE2E /* RxBlocking-Dynamic */; };
 		D69090952AE3560900F7FE2E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D69090942AE3560900F7FE2E /* RxCocoa */; };
-		D69090972AE3560900F7FE2E /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D69090962AE3560900F7FE2E /* RxCocoa-Dynamic */; };
 		D69090992AE3560900F7FE2E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = D69090982AE3560900F7FE2E /* RxRelay */; };
-		D690909B2AE3560900F7FE2E /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D690909A2AE3560900F7FE2E /* RxRelay-Dynamic */; };
 		D690909D2AE3560900F7FE2E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D690909C2AE3560900F7FE2E /* RxSwift */; };
-		D690909F2AE3560900F7FE2E /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D690909E2AE3560900F7FE2E /* RxSwift-Dynamic */; };
 		D69090A22AE3563900F7FE2E /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D69090A12AE3563900F7FE2E /* Moya */; };
 		D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = D69090A32AE3563900F7FE2E /* RxMoya */; };
 		D69090A72AE3565B00F7FE2E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D69090A62AE3565B00F7FE2E /* SnapKit */; };
-		D69090A92AE3565B00F7FE2E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D69090A82AE3565B00F7FE2E /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDislogVIew.swift; sourceTree = "<group>"; };
+		087BC4B42AE6602700AF725A /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		D66297CD2AE36F55006CBBE4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D66297CF2AE37492006CBBE4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -82,17 +83,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */,
-				D690909F2AE3560900F7FE2E /* RxSwift-Dynamic in Frameworks */,
+				087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */,
 				D69090992AE3560900F7FE2E /* RxRelay in Frameworks */,
 				D69090A22AE3563900F7FE2E /* Moya in Frameworks */,
-				D69090972AE3560900F7FE2E /* RxCocoa-Dynamic in Frameworks */,
-				D690909B2AE3560900F7FE2E /* RxRelay-Dynamic in Frameworks */,
+				087BC4B12AE63E3900AF725A /* RxGesture in Frameworks */,
 				D69090952AE3560900F7FE2E /* RxCocoa in Frameworks */,
 				D69090912AE3560900F7FE2E /* RxBlocking in Frameworks */,
-				D69090932AE3560900F7FE2E /* RxBlocking-Dynamic in Frameworks */,
 				D690909D2AE3560900F7FE2E /* RxSwift in Frameworks */,
 				D69090A72AE3565B00F7FE2E /* SnapKit in Frameworks */,
-				D69090A92AE3565B00F7FE2E /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +182,8 @@
 				D66297E12AE3B1C8006CBBE4 /* BottomSheetViewController.swift */,
 				D66297E32AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift */,
 				D66297E92AE4C09E006CBBE4 /* FaceStackView.swift */,
+				087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */,
+				087BC4B42AE6602700AF725A /* LocationView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -206,17 +206,14 @@
 			name = FaceGuess;
 			packageProductDependencies = (
 				D69090902AE3560900F7FE2E /* RxBlocking */,
-				D69090922AE3560900F7FE2E /* RxBlocking-Dynamic */,
 				D69090942AE3560900F7FE2E /* RxCocoa */,
-				D69090962AE3560900F7FE2E /* RxCocoa-Dynamic */,
 				D69090982AE3560900F7FE2E /* RxRelay */,
-				D690909A2AE3560900F7FE2E /* RxRelay-Dynamic */,
 				D690909C2AE3560900F7FE2E /* RxSwift */,
-				D690909E2AE3560900F7FE2E /* RxSwift-Dynamic */,
 				D69090A12AE3563900F7FE2E /* Moya */,
 				D69090A32AE3563900F7FE2E /* RxMoya */,
 				D69090A62AE3565B00F7FE2E /* SnapKit */,
-				D69090A82AE3565B00F7FE2E /* SnapKit-Dynamic */,
+				087BC4AE2AE63D8700AF725A /* RxGesture */,
+				087BC4B02AE63E3900AF725A /* RxGesture */,
 			);
 			productName = FaceGuess;
 			productReference = D690906F2AE354D700F7FE2E /* FaceGuess.app */;
@@ -250,6 +247,7 @@
 				D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D69090A02AE3563900F7FE2E /* XCRemoteSwiftPackageReference "Moya" */,
 				D69090A52AE3565B00F7FE2E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				087BC4AD2AE63D8700AF725A /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = D69090702AE354D700F7FE2E /* Products */;
 			projectDirPath = "";
@@ -279,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D66297EE2AE4FF7E006CBBE4 /* PersonalEditViewController.swift in Sources */,
+				087BC4B52AE6602700AF725A /* LocationView.swift in Sources */,
+				087BC4B32AE64AEF00AF725A /* TextDislogVIew.swift in Sources */,
 				D690908E2AE3558300F7FE2E /* LoginViewController.swift in Sources */,
 				D690908B2AE354FE00F7FE2E /* Extension.swift in Sources */,
 				D66297DA2AE376C8006CBBE4 /* RankViewController.swift in Sources */,
@@ -451,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5FB435U38C;
+				DEVELOPMENT_TEAM = 4V8M6B9A6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -483,7 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5FB435U38C;
+				DEVELOPMENT_TEAM = 4V8M6B9A6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -532,6 +532,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		087BC4AD2AE63D8700AF725A /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
 		D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -559,45 +567,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		087BC4AE2AE63D8700AF725A /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087BC4AD2AE63D8700AF725A /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		087BC4B02AE63E3900AF725A /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 087BC4AD2AE63D8700AF725A /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
 		D69090902AE3560900F7FE2E /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
-		};
-		D69090922AE3560900F7FE2E /* RxBlocking-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxBlocking-Dynamic";
 		};
 		D69090942AE3560900F7FE2E /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		D69090962AE3560900F7FE2E /* RxCocoa-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxCocoa-Dynamic";
-		};
 		D69090982AE3560900F7FE2E /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		D690909A2AE3560900F7FE2E /* RxRelay-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxRelay-Dynamic";
-		};
 		D690909C2AE3560900F7FE2E /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		D690909E2AE3560900F7FE2E /* RxSwift-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxSwift-Dynamic";
 		};
 		D69090A12AE3563900F7FE2E /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -613,11 +611,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D69090A52AE3565B00F7FE2E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		D69090A82AE3565B00F7FE2E /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D69090A52AE3565B00F7FE2E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

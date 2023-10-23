@@ -31,7 +31,7 @@ class MainTabController: UITabBarController {
         viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
         
         // 设置 TabBar 背景色
-        self.tabBar.backgroundColor = UIColor.gray
+        self.tabBar.backgroundColor = .black.withAlphaComponent(0.05)
 
         // 设置 TabBarItem 字体颜色和字号
         let normalAttributes: [NSAttributedString.Key: Any] = [
@@ -42,7 +42,6 @@ class MainTabController: UITabBarController {
             .font: UIFont.boldSystemFont(ofSize: 18),
             .foregroundColor: UIColor.colorWithHexString("#4272D7")
         ]
-
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
         // 选择默认显示的tab
