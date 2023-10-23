@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */; };
+		D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CD2AE36F55006CBBE4 /* WebViewController.swift */; };
+		D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CF2AE37492006CBBE4 /* MainTabController.swift */; };
+		D66297D32AE375EA006CBBE4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297D22AE375EA006CBBE4 /* HomeViewController.swift */; };
+		D66297D82AE376B5006CBBE4 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297D72AE376B5006CBBE4 /* PersonalViewController.swift */; };
+		D66297DA2AE376C8006CBBE4 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297D92AE376C8006CBBE4 /* RankViewController.swift */; };
+		D66297DC2AE376DC006CBBE4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297DB2AE376DC006CBBE4 /* ActivityViewController.swift */; };
+		D66297DE2AE39861006CBBE4 /* FourGridImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297DD2AE39861006CBBE4 /* FourGridImageView.swift */; };
+		D66297E02AE3A28A006CBBE4 /* HomeShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297DF2AE3A28A006CBBE4 /* HomeShowViewController.swift */; };
+		D66297E22AE3B1C8006CBBE4 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297E12AE3B1C8006CBBE4 /* BottomSheetViewController.swift */; };
+		D66297E42AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297E32AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift */; };
+		D66297E62AE3D5B5006CBBE4 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297E52AE3D5B5006CBBE4 /* HomeDetailViewController.swift */; };
+		D66297E82AE404DC006CBBE4 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297E72AE404DC006CBBE4 /* ActivityDetailViewController.swift */; };
+		D66297EA2AE4C09E006CBBE4 /* FaceStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297E92AE4C09E006CBBE4 /* FaceStackView.swift */; };
+		D66297EC2AE4CC38006CBBE4 /* PersonalSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297EB2AE4CC38006CBBE4 /* PersonalSettingViewController.swift */; };
+		D66297EE2AE4FF7E006CBBE4 /* PersonalEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297ED2AE4FF7E006CBBE4 /* PersonalEditViewController.swift */; };
 		D69090732AE354D700F7FE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69090722AE354D700F7FE2E /* AppDelegate.swift */; };
 		D69090752AE354D700F7FE2E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69090742AE354D700F7FE2E /* SceneDelegate.swift */; };
 		D690907A2AE354D700F7FE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69090782AE354D700F7FE2E /* Main.storyboard */; };
@@ -31,6 +47,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
+		D66297CD2AE36F55006CBBE4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D66297CF2AE37492006CBBE4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		D66297D22AE375EA006CBBE4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D66297D72AE376B5006CBBE4 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		D66297D92AE376C8006CBBE4 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		D66297DB2AE376DC006CBBE4 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		D66297DD2AE39861006CBBE4 /* FourGridImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourGridImageView.swift; sourceTree = "<group>"; };
+		D66297DF2AE3A28A006CBBE4 /* HomeShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeShowViewController.swift; sourceTree = "<group>"; };
+		D66297E12AE3B1C8006CBBE4 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		D66297E32AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPresentationController.swift; sourceTree = "<group>"; };
+		D66297E52AE3D5B5006CBBE4 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		D66297E72AE404DC006CBBE4 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		D66297E92AE4C09E006CBBE4 /* FaceStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceStackView.swift; sourceTree = "<group>"; };
+		D66297EB2AE4CC38006CBBE4 /* PersonalSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalSettingViewController.swift; sourceTree = "<group>"; };
+		D66297ED2AE4FF7E006CBBE4 /* PersonalEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalEditViewController.swift; sourceTree = "<group>"; };
 		D690906F2AE354D700F7FE2E /* FaceGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69090722AE354D700F7FE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D69090742AE354D700F7FE2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +99,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D66297D12AE375B3006CBBE4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D66297D22AE375EA006CBBE4 /* HomeViewController.swift */,
+				D66297DF2AE3A28A006CBBE4 /* HomeShowViewController.swift */,
+				D66297E52AE3D5B5006CBBE4 /* HomeDetailViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D66297D42AE375F5006CBBE4 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				D66297DB2AE376DC006CBBE4 /* ActivityViewController.swift */,
+				D66297E72AE404DC006CBBE4 /* ActivityDetailViewController.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		D66297D52AE37641006CBBE4 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				D66297D92AE376C8006CBBE4 /* RankViewController.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		D66297D62AE37657006CBBE4 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				D66297D72AE376B5006CBBE4 /* PersonalViewController.swift */,
+				D66297EB2AE4CC38006CBBE4 /* PersonalSettingViewController.swift */,
+				D66297ED2AE4FF7E006CBBE4 /* PersonalEditViewController.swift */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
 		D69090662AE354D700F7FE2E = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +155,15 @@
 		D69090712AE354D700F7FE2E /* FaceGuess */ = {
 			isa = PBXGroup;
 			children = (
+				D66297D12AE375B3006CBBE4 /* Home */,
+				D66297D42AE375F5006CBBE4 /* Activity */,
+				D66297D52AE37641006CBBE4 /* Rank */,
+				D66297D62AE37657006CBBE4 /* Personal */,
 				D69090862AE354FE00F7FE2E /* Extension */,
 				D69090722AE354D700F7FE2E /* AppDelegate.swift */,
 				D69090742AE354D700F7FE2E /* SceneDelegate.swift */,
 				D690908D2AE3558300F7FE2E /* LoginViewController.swift */,
+				D66297CF2AE37492006CBBE4 /* MainTabController.swift */,
 				D69090782AE354D700F7FE2E /* Main.storyboard */,
 				D690907B2AE354D800F7FE2E /* Assets.xcassets */,
 				D690907D2AE354D800F7FE2E /* LaunchScreen.storyboard */,
@@ -102,8 +176,14 @@
 			isa = PBXGroup;
 			children = (
 				D69090872AE354FE00F7FE2E /* BaseViewController.swift */,
+				D66297CD2AE36F55006CBBE4 /* WebViewController.swift */,
 				D69090882AE354FE00F7FE2E /* Extension.swift */,
 				D69090892AE354FE00F7FE2E /* Screen.swift */,
+				D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */,
+				D66297DD2AE39861006CBBE4 /* FourGridImageView.swift */,
+				D66297E12AE3B1C8006CBBE4 /* BottomSheetViewController.swift */,
+				D66297E32AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift */,
+				D66297E92AE4C09E006CBBE4 /* FaceStackView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -198,12 +278,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66297EE2AE4FF7E006CBBE4 /* PersonalEditViewController.swift in Sources */,
 				D690908E2AE3558300F7FE2E /* LoginViewController.swift in Sources */,
 				D690908B2AE354FE00F7FE2E /* Extension.swift in Sources */,
+				D66297DA2AE376C8006CBBE4 /* RankViewController.swift in Sources */,
 				D690908A2AE354FE00F7FE2E /* BaseViewController.swift in Sources */,
+				D66297EC2AE4CC38006CBBE4 /* PersonalSettingViewController.swift in Sources */,
+				D66297E42AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift in Sources */,
+				D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */,
 				D69090732AE354D700F7FE2E /* AppDelegate.swift in Sources */,
+				D66297D32AE375EA006CBBE4 /* HomeViewController.swift in Sources */,
+				D66297E22AE3B1C8006CBBE4 /* BottomSheetViewController.swift in Sources */,
+				D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */,
+				D66297DC2AE376DC006CBBE4 /* ActivityViewController.swift in Sources */,
 				D69090752AE354D700F7FE2E /* SceneDelegate.swift in Sources */,
+				D66297E62AE3D5B5006CBBE4 /* HomeDetailViewController.swift in Sources */,
 				D690908C2AE354FE00F7FE2E /* Screen.swift in Sources */,
+				D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */,
+				D66297DE2AE39861006CBBE4 /* FourGridImageView.swift in Sources */,
+				D66297D82AE376B5006CBBE4 /* PersonalViewController.swift in Sources */,
+				D66297E82AE404DC006CBBE4 /* ActivityDetailViewController.swift in Sources */,
+				D66297EA2AE4C09E006CBBE4 /* FaceStackView.swift in Sources */,
+				D66297E02AE3A28A006CBBE4 /* HomeShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

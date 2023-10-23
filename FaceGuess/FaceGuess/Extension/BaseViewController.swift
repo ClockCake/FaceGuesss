@@ -18,8 +18,15 @@ class BaseViewController: UIViewController {
         self.view.backgroundColor = UIColor.colorWithHexString("#000000")
         // 隐藏系统导航栏
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-
-        
+ 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.navigationController?.viewControllers.count ?? 0 > 1{
+            self.tabBarController?.tabBar.isHidden = true
+        }else{
+            self.tabBarController?.tabBar.isHidden = false
+        }
     }
     init(title:String,isShowBack:Bool = true) {
         self.titleStr = title
