@@ -11,6 +11,18 @@
 		087BC4B12AE63E3900AF725A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 087BC4B02AE63E3900AF725A /* RxGesture */; };
 		087BC4B32AE64AEF00AF725A /* TextDislogVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */; };
 		087BC4B52AE6602700AF725A /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4B42AE6602700AF725A /* LocationView.swift */; };
+		087BC4B92AE7930B00AF725A /* libTalkingDataSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4B72AE7930B00AF725A /* libTalkingDataSDK.a */; };
+		087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BB2AE7938600AF725A /* AdServices.framework */; };
+		087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BD2AE7939000AF725A /* iAd.framework */; };
+		087BC4C02AE7939900AF725A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BF2AE7939900AF725A /* StoreKit.framework */; };
+		087BC4C22AE793AA00AF725A /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */; };
+		087BC4C42AE793B300AF725A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C32AE793B300AF725A /* AdSupport.framework */; };
+		087BC4C62AE793BA00AF725A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C52AE793BA00AF725A /* CoreTelephony.framework */; };
+		087BC4C82AE793C200AF725A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C72AE793C200AF725A /* Security.framework */; };
+		087BC4CA2AE793CA00AF725A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C92AE793CA00AF725A /* SystemConfiguration.framework */; };
+		087BC4CC2AE793D900AF725A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4CB2AE793D900AF725A /* libc++.tbd */; };
+		087BC4CE2AE793E300AF725A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4CD2AE793E300AF725A /* libz.tbd */; };
+		087BC4D22AE7A54D00AF725A /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D12AE7A54D00AF725A /* PermissionManager.swift */; };
 		D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */; };
 		D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CD2AE36F55006CBBE4 /* WebViewController.swift */; };
 		D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CF2AE37492006CBBE4 /* MainTabController.swift */; };
@@ -48,6 +60,21 @@
 /* Begin PBXFileReference section */
 		087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDislogVIew.swift; sourceTree = "<group>"; };
 		087BC4B42AE6602700AF725A /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		087BC4B72AE7930B00AF725A /* libTalkingDataSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingDataSDK.a; sourceTree = "<group>"; };
+		087BC4B82AE7930B00AF725A /* TalkingDataSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataSDK.h; sourceTree = "<group>"; };
+		087BC4BB2AE7938600AF725A /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		087BC4BD2AE7939000AF725A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		087BC4BF2AE7939900AF725A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		087BC4C32AE793B300AF725A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		087BC4C52AE793BA00AF725A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		087BC4C72AE793C200AF725A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		087BC4C92AE793CA00AF725A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		087BC4CB2AE793D900AF725A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		087BC4CD2AE793E300AF725A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		087BC4CF2AE7959300AF725A /* FaceGuess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FaceGuess.entitlements; sourceTree = "<group>"; };
+		087BC4D02AE796B300AF725A /* FaceGuess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceGuess-Bridging-Header.h"; sourceTree = "<group>"; };
+		087BC4D12AE7A54D00AF725A /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		D66297CD2AE36F55006CBBE4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D66297CF2AE37492006CBBE4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -82,9 +109,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087BC4CE2AE793E300AF725A /* libz.tbd in Frameworks */,
+				087BC4CC2AE793D900AF725A /* libc++.tbd in Frameworks */,
+				087BC4CA2AE793CA00AF725A /* SystemConfiguration.framework in Frameworks */,
+				087BC4C82AE793C200AF725A /* Security.framework in Frameworks */,
+				087BC4C62AE793BA00AF725A /* CoreTelephony.framework in Frameworks */,
+				087BC4C42AE793B300AF725A /* AdSupport.framework in Frameworks */,
+				087BC4C22AE793AA00AF725A /* AppTrackingTransparency.framework in Frameworks */,
+				087BC4C02AE7939900AF725A /* StoreKit.framework in Frameworks */,
+				087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */,
+				087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */,
 				D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */,
 				087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */,
 				D69090992AE3560900F7FE2E /* RxRelay in Frameworks */,
+				087BC4B92AE7930B00AF725A /* libTalkingDataSDK.a in Frameworks */,
 				D69090A22AE3563900F7FE2E /* Moya in Frameworks */,
 				087BC4B12AE63E3900AF725A /* RxGesture in Frameworks */,
 				D69090952AE3560900F7FE2E /* RxCocoa in Frameworks */,
@@ -97,6 +135,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		087BC4B62AE792DA00AF725A /* TalkingDataSDK */ = {
+			isa = PBXGroup;
+			children = (
+				087BC4B72AE7930B00AF725A /* libTalkingDataSDK.a */,
+				087BC4B82AE7930B00AF725A /* TalkingDataSDK.h */,
+			);
+			path = TalkingDataSDK;
+			sourceTree = "<group>";
+		};
+		087BC4BA2AE7938600AF725A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				087BC4CD2AE793E300AF725A /* libz.tbd */,
+				087BC4CB2AE793D900AF725A /* libc++.tbd */,
+				087BC4C92AE793CA00AF725A /* SystemConfiguration.framework */,
+				087BC4C72AE793C200AF725A /* Security.framework */,
+				087BC4C52AE793BA00AF725A /* CoreTelephony.framework */,
+				087BC4C32AE793B300AF725A /* AdSupport.framework */,
+				087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */,
+				087BC4BF2AE7939900AF725A /* StoreKit.framework */,
+				087BC4BD2AE7939000AF725A /* iAd.framework */,
+				087BC4BB2AE7938600AF725A /* AdServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D66297D12AE375B3006CBBE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +203,7 @@
 			children = (
 				D69090712AE354D700F7FE2E /* FaceGuess */,
 				D69090702AE354D700F7FE2E /* Products */,
+				087BC4BA2AE7938600AF725A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +218,8 @@
 		D69090712AE354D700F7FE2E /* FaceGuess */ = {
 			isa = PBXGroup;
 			children = (
+				087BC4CF2AE7959300AF725A /* FaceGuess.entitlements */,
+				087BC4B62AE792DA00AF725A /* TalkingDataSDK */,
 				D66297D12AE375B3006CBBE4 /* Home */,
 				D66297D42AE375F5006CBBE4 /* Activity */,
 				D66297D52AE37641006CBBE4 /* Rank */,
@@ -162,10 +229,12 @@
 				D69090742AE354D700F7FE2E /* SceneDelegate.swift */,
 				D690908D2AE3558300F7FE2E /* LoginViewController.swift */,
 				D66297CF2AE37492006CBBE4 /* MainTabController.swift */,
+				087BC4D12AE7A54D00AF725A /* PermissionManager.swift */,
 				D69090782AE354D700F7FE2E /* Main.storyboard */,
 				D690907B2AE354D800F7FE2E /* Assets.xcassets */,
 				D690907D2AE354D800F7FE2E /* LaunchScreen.storyboard */,
 				D69090802AE354D800F7FE2E /* Info.plist */,
+				087BC4D02AE796B300AF725A /* FaceGuess-Bridging-Header.h */,
 			);
 			path = FaceGuess;
 			sourceTree = "<group>";
@@ -292,6 +361,7 @@
 				D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */,
 				D66297DC2AE376DC006CBBE4 /* ActivityViewController.swift in Sources */,
 				D69090752AE354D700F7FE2E /* SceneDelegate.swift in Sources */,
+				087BC4D22AE7A54D00AF725A /* PermissionManager.swift in Sources */,
 				D66297E62AE3D5B5006CBBE4 /* HomeDetailViewController.swift in Sources */,
 				D690908C2AE354FE00F7FE2E /* Screen.swift in Sources */,
 				D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */,
@@ -449,11 +519,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FaceGuess/FaceGuess.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4V8M6B9A6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "脸猜";
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要你的相机拍摄来修改头像";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "您的位置信息来更好的推荐匹配人员";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "您的位置信息来更好的推荐匹配人员";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要你的相册来修改头像";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -464,13 +540,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceGuess/TalkingDataSDK",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess.FaceGuess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceGuess/FaceGuess-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -481,11 +562,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FaceGuess/FaceGuess.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4V8M6B9A6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "脸猜";
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要你的相机拍摄来修改头像";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "您的位置信息来更好的推荐匹配人员";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "您的位置信息来更好的推荐匹配人员";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "需要你的相册来修改头像";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -496,13 +583,18 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceGuess/TalkingDataSDK",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess.FaceGuess;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceGuess/FaceGuess-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

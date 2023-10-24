@@ -15,13 +15,30 @@ class BaseViewController: UIViewController {
     private var isShowBack:Bool
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.colorWithHexString("#000000")
+        self.view.backgroundColor = UIColor.black
         // 隐藏系统导航栏
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        // 添加右滑返回手势
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgePan))
+        edgePan.edges = .left
+        self.view.addGestureRecognizer(edgePan)
  
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent // 设置为你需要的样式
+    }
+    @objc func handleEdgePan(_ recognizer: UIScreenEdgePanGestureRecognizer) {
+        if recognizer.state == .began || recognizer.state == .changed {
+            // 获取滑动的距离
+            let translationX = recognizer.translation(in: self.view).x
+            print("滑动距离: \(translationX)")  // 调试输出
+        } else if recognizer.state == .ended || recognizer.state == .cancelled {
+            // 滑动结束，这里可以进行其他操作，比如 pop ViewController
+            let translationX = recognizer.translation(in: self.view).x
+            if translationX > self.view.bounds.width * 0.2 {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -52,8 +69,8 @@ class BaseViewController: UIViewController {
         // 添加到视图
         customNavBar.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.top.equalToSuperview().offset(kStatusBarHeight)
-            make.height.equalTo(kNavBarHeight)
+            make.top.equalToSuperview().offset(0)
+            make.height.equalTo(kNavBarAndStatusBarHeight)
         }
         
 

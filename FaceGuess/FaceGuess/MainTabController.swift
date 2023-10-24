@@ -29,7 +29,6 @@ class MainTabController: UITabBarController {
         // 将UIViewController添加到TabBarController
         let viewControllerList = [firstVC, secondVC, thirdVC, fourthVC]
         viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
-        
         // 设置 TabBar 背景色
         self.tabBar.backgroundColor = .black.withAlphaComponent(0.05)
 
