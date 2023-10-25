@@ -14,6 +14,7 @@ class LoginViewController: BaseViewController {
     private let isPhoneValid = BehaviorRelay(value: false)
     private let isPasswordValid = BehaviorRelay(value: false)
     private let isButtonSelected = BehaviorRelay(value: false)
+    private let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -193,6 +194,17 @@ class LoginViewController: BaseViewController {
         
         getCodeBtn.rx.tap.withUnretained(self).subscribe(onNext: { _ in
             getCodeBtn.startCountdown()
+            self.viewModel.getSignatureTime().withUnretained(self)
+                .subscribe(onNext: { hour in
+                    self.viewModel.RequestSMSCode(mobile: phoneTF.text ?? "", signature: self.viewModel.md5(string: "bafacegs\(hour)"))
+                        .subscribe(onNext: { response in
+                            print("Success:", response)
+                        }, onError: { error in
+                            print("Error:", error)
+                        })
+                        .disposed(by: self.disposeBag)
+                })
+                .disposed(by: self.viewModel.disposeBag)
 
         }).disposed(by: disposeBag)
         
@@ -273,5 +285,5 @@ extension LoginViewController : UITextViewDelegate,UITextFieldDelegate {
 
     }
     
-   
+
 }

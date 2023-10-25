@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087792B22AE8F1D800B54A5F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B12AE8F1D800B54A5F /* APIService.swift */; };
+		087792B42AE8F3B600B54A5F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B32AE8F3B600B54A5F /* ViewModel.swift */; };
+		087792B62AE9003800B54A5F /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B52AE9003800B54A5F /* NetworkLoggerPlugin.swift */; };
 		087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 087BC4AE2AE63D8700AF725A /* RxGesture */; };
 		087BC4B12AE63E3900AF725A /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 087BC4B02AE63E3900AF725A /* RxGesture */; };
 		087BC4B32AE64AEF00AF725A /* TextDislogVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */; };
@@ -23,6 +26,8 @@
 		087BC4CC2AE793D900AF725A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4CB2AE793D900AF725A /* libc++.tbd */; };
 		087BC4CE2AE793E300AF725A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4CD2AE793E300AF725A /* libz.tbd */; };
 		087BC4D22AE7A54D00AF725A /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D12AE7A54D00AF725A /* PermissionManager.swift */; };
+		087BC4D52AE8E9B800AF725A /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D42AE8E9B800AF725A /* CommonModel.swift */; };
+		087BC4D82AE8EA5F00AF725A /* CommonParametersPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */; };
 		D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */; };
 		D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CD2AE36F55006CBBE4 /* WebViewController.swift */; };
 		D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CF2AE37492006CBBE4 /* MainTabController.swift */; };
@@ -58,6 +63,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087792B12AE8F1D800B54A5F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		087792B32AE8F3B600B54A5F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		087792B52AE9003800B54A5F /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDislogVIew.swift; sourceTree = "<group>"; };
 		087BC4B42AE6602700AF725A /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		087BC4B72AE7930B00AF725A /* libTalkingDataSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingDataSDK.a; sourceTree = "<group>"; };
@@ -75,6 +83,8 @@
 		087BC4CF2AE7959300AF725A /* FaceGuess.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FaceGuess.entitlements; sourceTree = "<group>"; };
 		087BC4D02AE796B300AF725A /* FaceGuess-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FaceGuess-Bridging-Header.h"; sourceTree = "<group>"; };
 		087BC4D12AE7A54D00AF725A /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		087BC4D42AE8E9B800AF725A /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
+		087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonParametersPlugin.swift; sourceTree = "<group>"; };
 		D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		D66297CD2AE36F55006CBBE4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D66297CF2AE37492006CBBE4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -161,6 +171,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		087BC4D32AE8E9A700AF725A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				087BC4D42AE8E9B800AF725A /* CommonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		087BC4D62AE8EA4800AF725A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */,
+				087792B52AE9003800B54A5F /* NetworkLoggerPlugin.swift */,
+				087792B12AE8F1D800B54A5F /* APIService.swift */,
+				087792B32AE8F3B600B54A5F /* ViewModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		D66297D12AE375B3006CBBE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +247,8 @@
 		D69090712AE354D700F7FE2E /* FaceGuess */ = {
 			isa = PBXGroup;
 			children = (
+				087BC4D62AE8EA4800AF725A /* Networking */,
+				087BC4D32AE8E9A700AF725A /* Model */,
 				087BC4CF2AE7959300AF725A /* FaceGuess.entitlements */,
 				087BC4B62AE792DA00AF725A /* TalkingDataSDK */,
 				D66297D12AE375B3006CBBE4 /* Home */,
@@ -351,20 +382,25 @@
 				D690908E2AE3558300F7FE2E /* LoginViewController.swift in Sources */,
 				D690908B2AE354FE00F7FE2E /* Extension.swift in Sources */,
 				D66297DA2AE376C8006CBBE4 /* RankViewController.swift in Sources */,
+				087792B42AE8F3B600B54A5F /* ViewModel.swift in Sources */,
+				087792B62AE9003800B54A5F /* NetworkLoggerPlugin.swift in Sources */,
 				D690908A2AE354FE00F7FE2E /* BaseViewController.swift in Sources */,
 				D66297EC2AE4CC38006CBBE4 /* PersonalSettingViewController.swift in Sources */,
 				D66297E42AE3B1D8006CBBE4 /* BottomSheetPresentationController.swift in Sources */,
 				D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */,
 				D69090732AE354D700F7FE2E /* AppDelegate.swift in Sources */,
 				D66297D32AE375EA006CBBE4 /* HomeViewController.swift in Sources */,
+				087BC4D82AE8EA5F00AF725A /* CommonParametersPlugin.swift in Sources */,
 				D66297E22AE3B1C8006CBBE4 /* BottomSheetViewController.swift in Sources */,
 				D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */,
+				087BC4D52AE8E9B800AF725A /* CommonModel.swift in Sources */,
 				D66297DC2AE376DC006CBBE4 /* ActivityViewController.swift in Sources */,
 				D69090752AE354D700F7FE2E /* SceneDelegate.swift in Sources */,
 				087BC4D22AE7A54D00AF725A /* PermissionManager.swift in Sources */,
 				D66297E62AE3D5B5006CBBE4 /* HomeDetailViewController.swift in Sources */,
 				D690908C2AE354FE00F7FE2E /* Screen.swift in Sources */,
 				D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */,
+				087792B22AE8F1D800B54A5F /* APIService.swift in Sources */,
 				D66297DE2AE39861006CBBE4 /* FourGridImageView.swift in Sources */,
 				D66297D82AE376B5006CBBE4 /* PersonalViewController.swift in Sources */,
 				D66297E82AE404DC006CBBE4 /* ActivityDetailViewController.swift in Sources */,

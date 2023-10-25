@@ -21,11 +21,13 @@ class WebViewController: BaseViewController {
         // 初始化 WKWebView
         webView = WKWebView(frame: .zero)
         webView.navigationDelegate = self  // 设置导航代理，如果需要
+        webView.isOpaque = false
+        webView.backgroundColor = .clear  // 设置背景色为透明
         // 添加 WKWebView 到视图层次结构
         view.addSubview(webView)
         
         // 使用 Auto Layout 来设置 WKWebView 的约束
-        webView.translatesAutoresizingMaskIntoConstraints = false
+//        webView.translatesAutoresizingMaskIntoConstraints = false
         webView.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview()
             make.top.equalTo(customNavBar.snp.bottom)
@@ -60,7 +62,9 @@ extension WebViewController: WKNavigationDelegate {
     // 例如：在网页加载完成时隐藏活动指示器
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // 隐藏活动指示器
+
     }
-    
+ 
+
     // ... 其他 WKNavigationDelegate 方法 ...
 }

@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         ///屏蔽约束打印
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
 
-        initTalkingDataSDK()
         
+        initTalkingDataSDK()
         extraGraphicsSetting()
         return true
     }
@@ -42,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        UserDefaults.standard.set(token, forKey: "device_token")
+    }
     /// overall situation setting
     func extraGraphicsSetting()
     {
@@ -60,9 +64,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             if path.status == .satisfied {
                 // 网络可用，请求IDFA
                 self?.requestIDFA { [weak self] in
-                    // 第二步：请求定位权限
-                    self?.requestLocationPermission()
-                    TalkingDataSDK.`init`(AppDelegate.talkingDataSDKKey, channelId: "AppStore", custom: "")
+                    // 延迟 2 秒执行
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                        // 在这里放置需要延迟执行的代码
+                        // 第二步：请求定位权限
+                        self?.requestLocationPermission()
+                        // 注册推送通知
+                        let notificationCenter = UNUserNotificationCenter.current()
+                        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                            // Handle granted or not
+                        }
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+
+
 
                 }
             }
@@ -74,6 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                 case .authorized:
+                    TalkingDataSDK.`init`(AppDelegate.talkingDataSDKKey, channelId: "AppStore", custom: "")
                     let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                     print("IDFA: \(idfa)")
                 default:
@@ -96,6 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     func requestLocationPermission() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+
         // 从UserDefaults中获取上一次的定位授权状态
         let isAuthorized = UserDefaults.standard.bool(forKey: "isLocationAuthorized")
         PermissionManager.shared.isLocationAuthorized = isAuthorized
@@ -118,7 +136,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
           PermissionManager.shared.isLocationAuthorized = isAuthorized
           UserDefaults.standard.set(isAuthorized, forKey: "isLocationAuthorized")
     }
-
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        
+        UserDefaults.standard.set(location.coordinate.longitude, forKey: "longitude")
+        UserDefaults.standard.set(location.coordinate.latitude, forKey: "latitude")
+    }
 }
 extension Notification.Name {
     static let locationAuthorizationChanged = Notification.Name("locationAuthorizationChanged")

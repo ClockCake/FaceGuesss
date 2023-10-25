@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let loginVC = LoginViewController(title: "",isShowBack: false)
         let nav = UINavigationController(rootViewController: loginVC)
         let mainTab = MainTabController()
-        window?.rootViewController = mainTab
+        window?.rootViewController = nav
         
         window?.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }
