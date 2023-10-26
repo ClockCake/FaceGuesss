@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 class PersonalSettingViewController: BaseViewController {
     private let disposeBag = DisposeBag()
+    private let viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         customNavBar.backgroundColor = .black
@@ -51,6 +52,14 @@ class PersonalSettingViewController: BaseViewController {
             }
             // 添加确定按钮
             let okButton = UIAlertAction(title: "确定", style: .default) { _ in
+                self.viewModel.logoutRequest(key: UserManager.shared.key ?? "")
+                    .withUnretained(self)
+                    .subscribe(onNext: { _ in
+                        let loginVC = LoginViewController(title: "",isShowBack: false)
+                        let nav = UINavigationController(rootViewController: loginVC)
+                        UIApplication.shared.windows.first?.rootViewController = nav
+                        UserManager.shared.clearAll()
+                    }).disposed(by: self.viewModel.disposeBag)
             }
             alert.addAction(cancelBtn)
             // 将动作按钮添加到UIAlertController中
@@ -69,6 +78,7 @@ class PersonalSettingViewController: BaseViewController {
             }
             // 添加确定按钮
             let okButton = UIAlertAction(title: "确定", style: .default) { _ in
+                
             }
             alert.addAction(cancelBtn)
             // 将动作按钮添加到UIAlertController中

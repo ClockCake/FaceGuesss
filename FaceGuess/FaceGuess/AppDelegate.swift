@@ -10,7 +10,7 @@ import Network
 import AppTrackingTransparency
 import AdSupport
 import CoreLocation
-
+import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate  {
     static private let talkingDataSDKKey = "3AB64976E76E4B2183430371D9AD139E"
@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         // Override point for customization after application launch.
         ///屏蔽约束打印
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
-
         
+        IQKeyboardManager.shared.enable = true
+
         initTalkingDataSDK()
         extraGraphicsSetting()
         return true

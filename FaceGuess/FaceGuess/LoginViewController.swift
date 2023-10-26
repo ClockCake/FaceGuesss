@@ -194,17 +194,14 @@ class LoginViewController: BaseViewController {
         
         getCodeBtn.rx.tap.withUnretained(self).subscribe(onNext: { _ in
             getCodeBtn.startCountdown()
-            self.viewModel.getSignatureTime().withUnretained(self)
-                .subscribe(onNext: { hour in
-                    self.viewModel.RequestSMSCode(mobile: phoneTF.text ?? "", signature: self.viewModel.md5(string: "bafacegs\(hour)"))
-                        .subscribe(onNext: { response in
-                            print("Success:", response)
-                        }, onError: { error in
-                            print("Error:", error)
-                        })
-                        .disposed(by: self.disposeBag)
+            let hh = self.viewModel.getSignatureTime()
+            self.viewModel.RequestSMSCode(mobile: phoneTF.text ?? "", signature: self.viewModel.md5(string: "bafacegs\(hh)"))
+                .subscribe(onNext: { response in
+                    print("Success:", response)
+                }, onError: { error in
+                    print("Error:", error)
                 })
-                .disposed(by: self.viewModel.disposeBag)
+                .disposed(by: self.disposeBag)
 
         }).disposed(by: disposeBag)
         
@@ -215,7 +212,7 @@ class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
 
         passwordTF.rx.text.orEmpty
-            .map { $0.count == 6 }
+            .map { $0.count == 5 }
             .bind(to: isPasswordValid)
             .disposed(by: disposeBag)
 
@@ -234,12 +231,22 @@ class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         loginBtn.rx.tap.withUnretained(self).subscribe(onNext: { _ in
-            // 创建 MainTabController 实例
-            let mainTabController = MainTabController()
-            
-            // 设置 mainTabController 为 UIWindow 的根视图控制器
-            UIApplication.shared.windows.first?.rootViewController = mainTabController
-            
+            let hh = self.viewModel.getSignatureTime()
+            self.viewModel.loginRequest(mobile: phoneTF.text ?? "", signature: self.viewModel.md5(string: "bafacegs\(hh)"), code: passwordTF.text ?? "")
+                .withUnretained(self)
+                .subscribe(onNext: { response in
+                    UserManager.shared.key = response.1.key
+                    UserManager.shared.kefu = response.1.kefu
+                    UserManager.shared.tab = response.1.tab
+                    // 创建 MainTabController 实例
+                    let mainTabController = MainTabController()
+                    // 设置 mainTabController 为 UIWindow 的根视图控制器
+                    UIApplication.shared.windows.first?.rootViewController = mainTabController
+
+                }, onError: { error in
+                    
+                }).disposed(by: self.disposeBag)
+
         }).disposed(by: disposeBag)
 
   

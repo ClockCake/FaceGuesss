@@ -26,12 +26,16 @@ public final class NetworkLoggerPlugin: PluginType {
         print("Received response:")
         switch result {
         case .success(let response):
-            do {
-                let json = try response.mapJSON()
-                print("JSON: \(json)")
-            } catch {
-                print("Failed to parse JSON")
-            }
+                do {
+                    if let jsonObject = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] {
+                        let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: [.withoutEscapingSlashes])
+                        if let jsonString = String(data: jsonData, encoding: .utf8) {
+                            print("JSON: \(jsonString)")
+                        }
+                    }
+                } catch {
+                    print("Failed to parse JSON")
+                }
         case .failure(let error):
             print("Error: \(error)")
         }

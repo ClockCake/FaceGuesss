@@ -20,7 +20,8 @@ public struct CommonParametersPlugin: PluginType {
                                                "bdgd":model.tdid,
                                                "lfi":model.lng,
                                                "lob":model.lat,
-                                               "appname":model.appname
+                                               "appname":model.appname,
+                                              
         ]
 
         do {
