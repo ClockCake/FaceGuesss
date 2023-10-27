@@ -6,8 +6,21 @@
 //
 
 import Foundation
+
 struct LoginModel: Codable {
     let key: String?
     let kefu: String?
     let tab: Int?
+}
+struct SettingModel: Codable {
+    let prelogin:String?
+    let full:String?
+    let tab:String?
+    let rank:String?
+//    let box:boxModel?
+}
+struct boxModel: Codable {
+    let url:String?
+    let width:String
+    let height:String
 }

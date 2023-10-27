@@ -54,6 +54,29 @@ class ViewModel {
     }
     
     
+    /// 一键登录
+    /// - Parameters:
+    ///   - signature: <#signature description#>
+    ///   - result: <#result description#>
+    /// - Returns: <#description#>
+    func NoAuthLoginRequest(signature: String,result:[String:Any])-> Observable<LoginModel> {
+        return provider.rx.request(.getNoAuthLogin(signature: signature, result: result))
+            .filterSuccessfulStatusCodes()
+            .asObservable()  // 转换 Single 为 Observable
+            .flatMap { [unowned self] response -> Observable<LoginModel> in
+                do {
+                    let result = try self.mapDataField(from: response, type: LoginModel.self)
+                    return Observable.just(result)  // 创建并返回一个包含解析结果的 Observable
+                } catch let error {
+                    return Observable.error(error)  // 创建并返回一个包含错误的 Observable
+                }
+            }
+            .catch { error in
+                // 在这里，你可以处理错误
+                return Observable.error(error)
+            }
+    }
+    
     /// 登录
     /// - Parameters:
     ///   - mobile: <#mobile description#>
@@ -72,7 +95,7 @@ class ViewModel {
                     return Observable.error(error)  // 创建并返回一个包含错误的 Observable
                 }
             }
-            .catchError { error in
+            .catch { error in
                 // 在这里，你可以处理错误
                 return Observable.error(error)
             }
@@ -87,6 +110,96 @@ class ViewModel {
             .mapJSON()
             .asObservable()
     }
+    
+    /// 注销账号-文案
+    /// - Parameters:
+    ///   - key: <#key description#>
+    ///   - cancel_member: <#cancel_member description#>
+    /// - Returns: <#description#>
+    func destructionInfoRequest(key:String) -> Observable<[String:String]> {
+        return provider.rx.request(.destructionInfo(key: key))
+            .filterSuccessfulStatusCodes()
+            .asObservable()  // 转换 Single 为 Observable
+            .flatMap { [unowned self] response -> Observable<[String:String]> in
+                do {
+                    let result = try self.mapDataField(from: response, type: [String:String].self)
+                    return Observable.just(result)  // 创建并返回一个包含解析结果的 Observable
+                } catch let error {
+                    return Observable.error(error)  // 创建并返回一个包含错误的 Observable
+                }
+            }
+            .catch { error in
+                // 在这里，你可以处理错误
+                return Observable.error(error)
+            }
+    }
+    
+    
+    /// 注销账号-提交
+    /// - Parameters:
+    ///   - key: <#key description#>
+    ///   - signature: <#signature description#>
+    /// - Returns: <#description#>
+    func destructionCommitRequest(key:String , signature:String) -> Observable<Any>{
+        return provider.rx.request(.destructionCommit(key: key, signature: signature))
+            .filterSuccessfulStatusCodes()
+            .mapJSON()
+            .asObservable()
+    }
+    
+    /// 设置
+    /// - Parameter key: <#key description#>
+    /// - Returns: <#description#>
+    func mySettingRequest(key:String , signature:String) -> Observable<SettingModel> {
+        return provider.rx.request(.mySetting(key: key, signature: signature))
+            .filterSuccessfulStatusCodes()
+            .asObservable()  // 转换 Single 为 Observable
+            .flatMap { [unowned self] response -> Observable<SettingModel> in
+                do {
+                    let result = try self.mapDataField(from: response, type: SettingModel.self)
+                    return Observable.just(result)  // 创建并返回一个包含解析结果的 Observable
+                } catch let error {
+                    return Observable.error(error)  // 创建并返回一个包含错误的 Observable
+                }
+            }
+            .catch { error in
+                // 在这里，你可以处理错误
+                return Observable.error(error)
+            }
+    }
+    
+    
+    /// 获取Html 动态页
+    /// - Parameters:
+    ///   - key: <#key description#>
+    ///   - kefu: <#kefu description#>
+    /// - Returns: <#description#>
+    func getHtmlRequest(key: String, kefu: String) -> Observable<String> {
+        return provider.rx.request(.getHtmlView(key: key, kefu: kefu))
+            .filterSuccessfulStatusCodes()
+            .mapString()  // 使用.mapString()来获取响应体作为字符串
+            .asObservable()
+    }
+    
+    ///消息未读数
+    func getUnReadRequest(key:String) -> Observable<[String:Int]> {
+        return provider.rx.request(.getBadge(key: key))
+            .filterSuccessfulStatusCodes()
+            .asObservable()  // 转换 Single 为 Observable
+            .flatMap { [unowned self] response -> Observable<[String:Int]> in
+                do {
+                    let result = try self.mapDataField(from: response, type: [String:Int].self)
+                    return Observable.just(result)  // 创建并返回一个包含解析结果的 Observable
+                } catch let error {
+                    return Observable.error(error)  // 创建并返回一个包含错误的 Observable
+                }
+            }
+            .catch { error in
+                // 在这里，你可以处理错误
+                return Observable.error(error)
+            }
+    }
+    
 
 }
 

@@ -41,3 +41,26 @@ let kTabBarHeight: CGFloat = (kIsPhoneX ? (49 + kSafeHeight) : 49)
 
 /// 导航条和Tabbar总高度
 let kNavAndTabHeight: CGFloat = kNavBarAndStatusBarHeight + kTabBarHeight
+
+
+
+class Utils {
+    static func getCurrentNavigationController() -> UINavigationController? {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let rootViewController = windowScene.windows.first?.rootViewController else {
+            return nil
+        }
+
+        var currentController: UIViewController = rootViewController
+        while let presentedController = currentController.presentedViewController {
+            currentController = presentedController
+        }
+        
+        if let navigationController = currentController as? UINavigationController {
+            return navigationController
+        } else {
+            return currentController.navigationController
+        }
+    }
+}
+

@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import RxSwift
 class MainTabController: UITabBarController {
-
+    private var thirdVC:RankViewController!
+    private let viewModel = ViewModel()
+    private let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tabBar.isTranslucent = false
@@ -15,7 +18,7 @@ class MainTabController: UITabBarController {
         // 创建各个页面的UIViewController
         let firstVC =  HomeViewController(title: "",isShowBack: false)
         let secondVC = ActivityViewController(title: "",isShowBack: false)
-        let thirdVC = RankViewController(title: "", isShowBack: false, url: "https://chat.openai.com")
+        let thirdVC = RankViewController(title: "", isShowBack: false, url: "")
         let fourthVC = PersonalViewController(title: "",isShowBack: false)
         
         // 为UIViewController设置标题、图标等
@@ -26,6 +29,7 @@ class MainTabController: UITabBarController {
         thirdVC.tabBarItem = UITabBarItem(title: "榜单", image: clearImage.withRenderingMode(.alwaysOriginal), tag: 2)
         fourthVC.tabBarItem = UITabBarItem(title: "我的", image: clearImage.withRenderingMode(.alwaysOriginal), tag: 3)
         
+        self.thirdVC = thirdVC
         // 将UIViewController添加到TabBarController
         let viewControllerList = [firstVC, secondVC, thirdVC, fourthVC]
         viewControllers = viewControllerList.map { UINavigationController(rootViewController: $0) }
@@ -43,8 +47,7 @@ class MainTabController: UITabBarController {
         ]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
-        // 选择默认显示的tab
-        selectedIndex = 0
+
         if #available(iOS 13.0, *){
             let standardAppearance = self.tabBar.standardAppearance.copy()
             let inlineLayoutAppearance = UITabBarItemAppearance.init()
@@ -55,6 +58,42 @@ class MainTabController: UITabBarController {
 
             self.tabBar.standardAppearance = standardAppearance
         }
+        // 选择默认显示的tab
+        if let index = Int(UserManager.shared.settingModel?.tab ?? "0") , index == 1{
+            selectedIndex = 2
+        }else{
+            selectedIndex = 0
+        }
 
+    }
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        var selectIndex = 0
+        guard let tabItems = tabBar.items else {
+            // 在 tabBar 中没有 items
+            return
+        }
+        
+        // 在这里，我们通过遍历 tabBar 的 items，找出我们点击的 item 在数组里的 index。
+        for (index, tabItem) in tabItems.enumerated() {
+            if tabItem == item {
+                selectIndex = index
+                break
+            }
+        }
+        
+        if selectIndex == 2 {
+            if let key = UserManager.shared.key,key.count > 0 {
+                self.viewModel.getHtmlRequest(key: UserManager.shared.key ?? "", kefu: UserManager.shared.kefu ?? "")
+                    .withUnretained(self)
+                    .subscribe(onNext: { result in
+                        self.thirdVC.currentUrl = result.1
+                    })
+                    .disposed(by: self.viewModel.disposeBag)
+            }else{
+                let loginVC = LoginViewController(title: "",isShowBack: false)
+                let nav = UINavigationController(rootViewController: loginVC)
+                UIApplication.shared.windows.first?.rootViewController = nav
+            }
+        }
     }
 }

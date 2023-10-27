@@ -11,21 +11,24 @@ import AppTrackingTransparency
 import AdSupport
 import CoreLocation
 import IQKeyboardManagerSwift
+import RxSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate  {
     static private let talkingDataSDKKey = "3AB64976E76E4B2183430371D9AD139E"
-
+    private let disposeBag = DisposeBag()
     private let locationManager = CLLocationManager()
-
+    private let viewModel = ViewModel()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ///屏蔽约束打印
         UserDefaults.standard.set(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
-        
         IQKeyboardManager.shared.enable = true
-
         initTalkingDataSDK()
         extraGraphicsSetting()
+        if let key = UserManager.shared.key,key.count > 0 {
+            getBadgeSession()
+        }
+        
         return true
     }
 
@@ -85,11 +88,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         }
 
     }
+    
+    /// 请求IDFA
+    /// - Parameter completion: <#completion description#>
     func requestIDFA(completion: @escaping () -> Void) {
         if #available(iOS 14, *) {
             ATTrackingManager.requestTrackingAuthorization { status in
                 switch status {
                 case .authorized:
+                    /// 初始化 TalkingDataSDK
                     TalkingDataSDK.`init`(AppDelegate.talkingDataSDKKey, channelId: "AppStore", custom: "")
                     let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                     print("IDFA: \(idfa)")
@@ -110,6 +117,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         }
     }
     
+    
+    /// 获取定位
     func requestLocationPermission() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -142,6 +151,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         
         UserDefaults.standard.set(location.coordinate.longitude, forKey: "longitude")
         UserDefaults.standard.set(location.coordinate.latitude, forKey: "latitude")
+    }
+    
+    
+    /// 获取Badge值并设置
+    func getBadgeSession(){
+        self.viewModel.getUnReadRequest(key: UserManager.shared.key ?? "")
+            .withUnretained(self)
+            .subscribe(onNext: { sender in
+                UIApplication.shared.applicationIconBadgeNumber = sender.1["unread"] ?? 0
+            })
+            .disposed(by: disposeBag)
     }
 }
 extension Notification.Name {

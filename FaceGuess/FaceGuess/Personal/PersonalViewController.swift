@@ -207,7 +207,11 @@ class PersonalViewController: BaseViewController {
             let privacyPolicyVC = WebViewController.init(title: "隐私政策",  url: "https://www.apple.com")
             self.navigationController?.pushViewController(privacyPolicyVC, animated: true)
         case 102:
-            SKStoreReviewController.requestReview()
+            if let rank = Int(UserManager.shared.settingModel?.rank ?? "0"), rank == 1  {
+                SKStoreReviewController.requestReview()
+            }else{
+                print("服务端控制不弹窗")
+            }
             ///上架后可切换下面这个
 //            if let appStoreURL = URL(string: "https://apps.apple.com/app/idYOUR_APP_ID?action=write-review"),
 //               UIApplication.shared.canOpenURL(appStoreURL) {

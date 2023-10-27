@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import RxSwift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    private let viewModel = ViewModel()
     var window: UIWindow?
 
 
@@ -16,13 +16,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        let loginVC = LoginViewController(title: "",isShowBack: false)
-        let nav = UINavigationController(rootViewController: loginVC)
-        let mainTab = MainTabController()
-        window?.rootViewController = nav
         
-        window?.makeKeyAndVisible()
+        settingRequest { result in
+            switch result {
+            case .success(let model):
+                self.dealLogic(model: model)
+            case .failure(let error):
+                print("失败，错误是：\(error)")
+            }
+        }
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -56,4 +59,42 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+extension SceneDelegate {
+    func settingRequest(completion: @escaping (Result<SettingModel, Error>) -> Void) {
+        // 执行你的网络请求或其他逻辑...
+        let hh = self.viewModel.getSignatureTime()
+        self.viewModel.mySettingRequest(key: UserManager.shared.key ?? "", signature: self.viewModel.md5(string:"bafacegs\(hh)"))
+            .withUnretained(self)
+            .subscribe(onNext: { result in
+                completion(.success(result.1))
+            }).disposed(by: self.viewModel.disposeBag)
 
+    }
+    func dealLogic(model:SettingModel) {
+        UserManager.shared.settingModel = model
+        if model.prelogin ?? "" == "0" {
+            let mainTabBar = MainTabController()
+            window?.rootViewController = mainTabBar
+        }else{
+            if let key = UserManager.shared.key, key.count > 0 {
+                let mainTabBar = MainTabController()
+                window?.rootViewController = mainTabBar
+            }else{
+                let loginVC = LoginViewController(title: "",isShowBack: false)
+                let nav = UINavigationController(rootViewController: loginVC)
+                window?.rootViewController = nav
+            }
+        }
+        window?.makeKeyAndVisible()
+        
+        if UserManager.shared.isAccpetAgree == false {
+            let agreeVC = AgreementViewController(height: 430)
+            agreeVC.modalPresentationStyle = .custom
+            agreeVC.transitioningDelegate = agreeVC
+    //        agreeVC.currentNavController = currentNavController
+            window?.rootViewController?.present(agreeVC, animated: true, completion: nil)
+        }
+
+
+    }
+}

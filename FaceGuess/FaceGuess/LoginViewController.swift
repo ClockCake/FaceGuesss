@@ -18,6 +18,7 @@ class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+
     }
     func setUI(){
         let tipLab = UILabel.labelLayout(text: "手机号注册/登录", font: UIFont.boldSystemFont(ofSize: 20), textColor: .white, ali: .left, isPriority: true, tag: 0)
@@ -242,7 +243,7 @@ class LoginViewController: BaseViewController {
                     let mainTabController = MainTabController()
                     // 设置 mainTabController 为 UIWindow 的根视图控制器
                     UIApplication.shared.windows.first?.rootViewController = mainTabController
-
+                    self.getBadgeSession()
                 }, onError: { error in
                     
                 }).disposed(by: self.disposeBag)
@@ -291,6 +292,14 @@ extension LoginViewController : UITextViewDelegate,UITextFieldDelegate {
         }
 
     }
-    
+    /// 获取Badge值并设置
+    func getBadgeSession(){
+        self.viewModel.getUnReadRequest(key: UserManager.shared.key ?? "")
+            .withUnretained(self)
+            .subscribe(onNext: { sender in
+                UIApplication.shared.applicationIconBadgeNumber = sender.1["unread"] ?? 0
+            })
+            .disposed(by: disposeBag)
+    }
 
 }

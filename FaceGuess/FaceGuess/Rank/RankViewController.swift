@@ -7,6 +7,12 @@
 
 import UIKit
 class RankViewController: WebViewController {
+    var currentUrl:String?{
+        didSet{
+            guard let htmlStr = currentUrl else { return  }
+            webView.loadHTMLString(htmlStr, baseURL: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         webView.snp.remakeConstraints { make in

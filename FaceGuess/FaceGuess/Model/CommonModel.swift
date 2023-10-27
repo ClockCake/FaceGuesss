@@ -5,6 +5,7 @@
 //  Created by hyd on 2023/10/25.
 //
 import AdSupport
+import UIKit
 struct CommonModel:Codable {
     ///版本号(version)
     var version:String{
@@ -16,7 +17,20 @@ struct CommonModel:Codable {
         }
     }
     ///获取客户端
-    var client:String = "苹果iPhone手机客户端"
+    var client:String{
+        get{
+            let deviceType = UIDevice.current.userInterfaceIdiom
+
+            switch deviceType {
+            case .phone:
+                return "iPhone"
+            case .pad:
+                return "iPad"
+            default:
+                return "unknown"
+            }
+        }
+    }
     
     /// 设备型号(device)
     var device:String {

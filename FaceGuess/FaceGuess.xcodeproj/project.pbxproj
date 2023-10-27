@@ -31,6 +31,8 @@
 		08F667D52AEA4A4400B1BCC8 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F667D42AEA4A4400B1BCC8 /* UserManager.swift */; };
 		08F667D72AEA537C00B1BCC8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F667D62AEA537C00B1BCC8 /* LoginModel.swift */; };
 		08F667DA2AEA6E7B00B1BCC8 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08F667D92AEA6E7B00B1BCC8 /* IQKeyboardManagerSwift */; };
+		08F667DE2AEB88E100B1BCC8 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F667DD2AEB88E100B1BCC8 /* AgreementViewController.swift */; };
+		08F667E12AEB92F900B1BCC8 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 08F667E02AEB92F900B1BCC8 /* PKHUD */; };
 		D66297CC2AE36C65006CBBE4 /* CountdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */; };
 		D66297CE2AE36F55006CBBE4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CD2AE36F55006CBBE4 /* WebViewController.swift */; };
 		D66297D02AE37492006CBBE4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66297CF2AE37492006CBBE4 /* MainTabController.swift */; };
@@ -90,6 +92,7 @@
 		087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonParametersPlugin.swift; sourceTree = "<group>"; };
 		08F667D42AEA4A4400B1BCC8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		08F667D62AEA537C00B1BCC8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		08F667DD2AEB88E100B1BCC8 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		D66297CB2AE36C65006CBBE4 /* CountdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownButton.swift; sourceTree = "<group>"; };
 		D66297CD2AE36F55006CBBE4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D66297CF2AE37492006CBBE4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 				087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */,
 				087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */,
 				D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */,
+				08F667E12AEB92F900B1BCC8 /* PKHUD in Frameworks */,
 				087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */,
 				D69090992AE3560900F7FE2E /* RxRelay in Frameworks */,
 				087BC4B92AE7930B00AF725A /* libTalkingDataSDK.a in Frameworks */,
@@ -292,6 +296,7 @@
 				087BC4B22AE64AEF00AF725A /* TextDislogVIew.swift */,
 				087BC4B42AE6602700AF725A /* LocationView.swift */,
 				08F667D42AEA4A4400B1BCC8 /* UserManager.swift */,
+				08F667DD2AEB88E100B1BCC8 /* AgreementViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				087BC4AE2AE63D8700AF725A /* RxGesture */,
 				087BC4B02AE63E3900AF725A /* RxGesture */,
 				08F667D92AEA6E7B00B1BCC8 /* IQKeyboardManagerSwift */,
+				08F667E02AEB92F900B1BCC8 /* PKHUD */,
 			);
 			productName = FaceGuess;
 			productReference = D690906F2AE354D700F7FE2E /* FaceGuess.app */;
@@ -358,6 +364,7 @@
 				D69090A52AE3565B00F7FE2E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				087BC4AD2AE63D8700AF725A /* XCRemoteSwiftPackageReference "RxGesture" */,
 				08F667D82AEA6E7B00B1BCC8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				08F667DF2AEB92F900B1BCC8 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = D69090702AE354D700F7FE2E /* Products */;
 			projectDirPath = "";
@@ -417,6 +424,7 @@
 				D66297D82AE376B5006CBBE4 /* PersonalViewController.swift in Sources */,
 				D66297E82AE404DC006CBBE4 /* ActivityDetailViewController.swift in Sources */,
 				D66297EA2AE4C09E006CBBE4 /* FaceStackView.swift in Sources */,
+				08F667DE2AEB88E100B1BCC8 /* AgreementViewController.swift in Sources */,
 				D66297E02AE3A28A006CBBE4 /* HomeShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,6 +696,14 @@
 				minimumVersion = 6.5.16;
 			};
 		};
+		08F667DF2AEB92F900B1BCC8 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		D690908F2AE3560900F7FE2E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -729,6 +745,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 08F667D82AEA6E7B00B1BCC8 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		08F667E02AEB92F900B1BCC8 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08F667DF2AEB92F900B1BCC8 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
 		};
 		D69090902AE3560900F7FE2E /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
