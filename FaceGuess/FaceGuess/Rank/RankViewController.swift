@@ -22,6 +22,6 @@ class RankViewController: WebViewController {
         }
         customNavBar.isHidden = true
 
-
+        
     }
 }

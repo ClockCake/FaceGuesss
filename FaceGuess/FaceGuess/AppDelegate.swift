@@ -12,6 +12,7 @@ import AdSupport
 import CoreLocation
 import IQKeyboardManagerSwift
 import RxSwift
+import CL_ShanYanSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate  {
     static private let talkingDataSDKKey = "3AB64976E76E4B2183430371D9AD139E"
@@ -29,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             getBadgeSession()
         }
         
+        CLShanYanSDKManager.initWithAppId("jesGSlEA") { (completeResult) in
+            if ((completeResult.error) != nil) {
+                print("初始化失败")
+            } else {
+                print("初始化成功")
+            }
+        }
         return true
     }
 

@@ -7,3 +7,6 @@
 
 
 #import "TalkingDataSDK.h"
+#import <CL_ShanYanSDK/CL_ShanYanSDK.h>
+#import <SVProgressHUD.h>
+
