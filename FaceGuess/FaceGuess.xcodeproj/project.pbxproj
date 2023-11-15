@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08114D502AF1E31100C3ADAD /* AutoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08114D4F2AF1E31100C3ADAD /* AutoLoginViewController.swift */; };
+		08114D572AF1E72700C3ADAD /* CL_ShanYanSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08114D522AF1E72700C3ADAD /* CL_ShanYanSDK.framework */; };
+		08114D582AF1E72700C3ADAD /* TYRZUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08114D532AF1E72700C3ADAD /* TYRZUISDK.framework */; };
+		08114D592AF1E72700C3ADAD /* sdk_oauth.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 08114D542AF1E72700C3ADAD /* sdk_oauth.bundle */; };
+		08114D5A2AF1E72700C3ADAD /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08114D552AF1E72700C3ADAD /* OAuth.framework */; };
+		08114D5B2AF1E72700C3ADAD /* EAccountApiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08114D562AF1E72700C3ADAD /* EAccountApiSDK.framework */; };
 		087792B22AE8F1D800B54A5F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B12AE8F1D800B54A5F /* APIService.swift */; };
 		087792B42AE8F3B600B54A5F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B32AE8F3B600B54A5F /* ViewModel.swift */; };
 		087792B62AE9003800B54A5F /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087792B52AE9003800B54A5F /* NetworkLoggerPlugin.swift */; };
@@ -28,6 +34,7 @@
 		087BC4D22AE7A54D00AF725A /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D12AE7A54D00AF725A /* PermissionManager.swift */; };
 		087BC4D52AE8E9B800AF725A /* CommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D42AE8E9B800AF725A /* CommonModel.swift */; };
 		087BC4D82AE8EA5F00AF725A /* CommonParametersPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */; };
+		089341962AEFA4990085C954 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 089341952AEFA4990085C954 /* libc++.1.tbd */; };
 		08F667D52AEA4A4400B1BCC8 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F667D42AEA4A4400B1BCC8 /* UserManager.swift */; };
 		08F667D72AEA537C00B1BCC8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F667D62AEA537C00B1BCC8 /* LoginModel.swift */; };
 		08F667DA2AEA6E7B00B1BCC8 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 08F667D92AEA6E7B00B1BCC8 /* IQKeyboardManagerSwift */; };
@@ -68,6 +75,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08114D4F2AF1E31100C3ADAD /* AutoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginViewController.swift; sourceTree = "<group>"; };
+		08114D522AF1E72700C3ADAD /* CL_ShanYanSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CL_ShanYanSDK.framework; sourceTree = "<group>"; };
+		08114D532AF1E72700C3ADAD /* TYRZUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TYRZUISDK.framework; sourceTree = "<group>"; };
+		08114D542AF1E72700C3ADAD /* sdk_oauth.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = sdk_oauth.bundle; sourceTree = "<group>"; };
+		08114D552AF1E72700C3ADAD /* OAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuth.framework; sourceTree = "<group>"; };
+		08114D562AF1E72700C3ADAD /* EAccountApiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EAccountApiSDK.framework; sourceTree = "<group>"; };
 		087792B12AE8F1D800B54A5F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		087792B32AE8F3B600B54A5F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		087792B52AE9003800B54A5F /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
@@ -90,6 +103,7 @@
 		087BC4D12AE7A54D00AF725A /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		087BC4D42AE8E9B800AF725A /* CommonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModel.swift; sourceTree = "<group>"; };
 		087BC4D72AE8EA5F00AF725A /* CommonParametersPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonParametersPlugin.swift; sourceTree = "<group>"; };
+		089341952AEFA4990085C954 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		08F667D42AEA4A4400B1BCC8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		08F667D62AEA537C00B1BCC8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		08F667DD2AEB88E100B1BCC8 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
@@ -127,17 +141,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089341962AEFA4990085C954 /* libc++.1.tbd in Frameworks */,
 				087BC4CE2AE793E300AF725A /* libz.tbd in Frameworks */,
+				08114D582AF1E72700C3ADAD /* TYRZUISDK.framework in Frameworks */,
 				087BC4CC2AE793D900AF725A /* libc++.tbd in Frameworks */,
 				087BC4CA2AE793CA00AF725A /* SystemConfiguration.framework in Frameworks */,
 				087BC4C82AE793C200AF725A /* Security.framework in Frameworks */,
+				08114D572AF1E72700C3ADAD /* CL_ShanYanSDK.framework in Frameworks */,
 				087BC4C62AE793BA00AF725A /* CoreTelephony.framework in Frameworks */,
 				087BC4C42AE793B300AF725A /* AdSupport.framework in Frameworks */,
 				087BC4C22AE793AA00AF725A /* AppTrackingTransparency.framework in Frameworks */,
 				087BC4C02AE7939900AF725A /* StoreKit.framework in Frameworks */,
+				08114D5B2AF1E72700C3ADAD /* EAccountApiSDK.framework in Frameworks */,
 				087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */,
 				087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */,
 				D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */,
+				08114D5A2AF1E72700C3ADAD /* OAuth.framework in Frameworks */,
 				08F667E12AEB92F900B1BCC8 /* PKHUD in Frameworks */,
 				087BC4AF2AE63D8700AF725A /* RxGesture in Frameworks */,
 				D69090992AE3560900F7FE2E /* RxRelay in Frameworks */,
@@ -155,6 +174,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08114D512AF1E72700C3ADAD /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				08114D522AF1E72700C3ADAD /* CL_ShanYanSDK.framework */,
+				08114D532AF1E72700C3ADAD /* TYRZUISDK.framework */,
+				08114D542AF1E72700C3ADAD /* sdk_oauth.bundle */,
+				08114D552AF1E72700C3ADAD /* OAuth.framework */,
+				08114D562AF1E72700C3ADAD /* EAccountApiSDK.framework */,
+			);
+			name = framework;
+			path = ../../../../../Downloads/SDK_iOS_v2.3.6.4_20230921/framework;
+			sourceTree = "<group>";
+		};
 		087BC4B62AE792DA00AF725A /* TalkingDataSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +199,7 @@
 		087BC4BA2AE7938600AF725A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				089341952AEFA4990085C954 /* libc++.1.tbd */,
 				087BC4CD2AE793E300AF725A /* libz.tbd */,
 				087BC4CB2AE793D900AF725A /* libc++.tbd */,
 				087BC4C92AE793CA00AF725A /* SystemConfiguration.framework */,
@@ -258,6 +291,7 @@
 		D69090712AE354D700F7FE2E /* FaceGuess */ = {
 			isa = PBXGroup;
 			children = (
+				08114D512AF1E72700C3ADAD /* framework */,
 				087BC4D62AE8EA4800AF725A /* Networking */,
 				087BC4D32AE8E9A700AF725A /* Model */,
 				087BC4CF2AE7959300AF725A /* FaceGuess.entitlements */,
@@ -270,6 +304,7 @@
 				D69090722AE354D700F7FE2E /* AppDelegate.swift */,
 				D69090742AE354D700F7FE2E /* SceneDelegate.swift */,
 				D690908D2AE3558300F7FE2E /* LoginViewController.swift */,
+				08114D4F2AF1E31100C3ADAD /* AutoLoginViewController.swift */,
 				D66297CF2AE37492006CBBE4 /* MainTabController.swift */,
 				087BC4D12AE7A54D00AF725A /* PermissionManager.swift */,
 				D69090782AE354D700F7FE2E /* Main.storyboard */,
@@ -382,6 +417,7 @@
 			files = (
 				D690907F2AE354D800F7FE2E /* LaunchScreen.storyboard in Resources */,
 				D690907C2AE354D800F7FE2E /* Assets.xcassets in Resources */,
+				08114D592AF1E72700C3ADAD /* sdk_oauth.bundle in Resources */,
 				D690907A2AE354D700F7FE2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D66297EE2AE4FF7E006CBBE4 /* PersonalEditViewController.swift in Sources */,
+				08114D502AF1E31100C3ADAD /* AutoLoginViewController.swift in Sources */,
 				087BC4B52AE6602700AF725A /* LocationView.swift in Sources */,
 				087BC4B32AE64AEF00AF725A /* TextDislogVIew.swift in Sources */,
 				D690908E2AE3558300F7FE2E /* LoginViewController.swift in Sources */,
@@ -591,7 +628,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,13 +638,14 @@
 					"$(PROJECT_DIR)/FaceGuess/TalkingDataSDK",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FaceGuess/FaceGuess-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hyd/Desktop/脸猜/FaceGuesss/FaceGuess/FaceGuess/FaceGuess-Bridging-Header";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -634,7 +672,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,13 +682,14 @@
 					"$(PROJECT_DIR)/FaceGuess/TalkingDataSDK",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.daydream.faceguess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "FaceGuess/FaceGuess-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hyd/Desktop/脸猜/FaceGuesss/FaceGuess/FaceGuess/FaceGuess-Bridging-Header";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

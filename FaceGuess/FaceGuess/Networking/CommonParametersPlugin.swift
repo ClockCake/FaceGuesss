@@ -21,7 +21,6 @@ public struct CommonParametersPlugin: PluginType {
                                                "lfi":model.lng,
                                                "lob":model.lat,
                                                "appname":model.appname,
-                                              
         ]
 
         do {

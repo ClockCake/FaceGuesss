@@ -80,8 +80,8 @@ extension SceneDelegate {
                 let mainTabBar = MainTabController()
                 window?.rootViewController = mainTabBar
             }else{
-                let loginVC =  AutoLoginVIewController.init(title: "", isShowBack: false)
-//                LoginViewController(title: "",isShowBack: false)
+//                let loginVC =  AutoLoginVIewController.init(title: "", isShowBack: false)
+                let loginVC  = LoginViewController(title: "",isShowBack: false)
                 let nav = UINavigationController(rootViewController: loginVC)
                 window?.rootViewController = nav
             }
