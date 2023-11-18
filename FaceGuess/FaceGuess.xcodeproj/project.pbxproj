@@ -23,7 +23,6 @@
 		087BC4B92AE7930B00AF725A /* libTalkingDataSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4B72AE7930B00AF725A /* libTalkingDataSDK.a */; };
 		087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BB2AE7938600AF725A /* AdServices.framework */; };
 		087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BD2AE7939000AF725A /* iAd.framework */; };
-		087BC4C02AE7939900AF725A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4BF2AE7939900AF725A /* StoreKit.framework */; };
 		087BC4C22AE793AA00AF725A /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */; };
 		087BC4C42AE793B300AF725A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C32AE793B300AF725A /* AdSupport.framework */; };
 		087BC4C62AE793BA00AF725A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 087BC4C52AE793BA00AF725A /* CoreTelephony.framework */; };
@@ -90,7 +89,6 @@
 		087BC4B82AE7930B00AF725A /* TalkingDataSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataSDK.h; sourceTree = "<group>"; };
 		087BC4BB2AE7938600AF725A /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		087BC4BD2AE7939000AF725A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		087BC4BF2AE7939900AF725A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		087BC4C32AE793B300AF725A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		087BC4C52AE793BA00AF725A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -151,8 +149,11 @@
 				087BC4C62AE793BA00AF725A /* CoreTelephony.framework in Frameworks */,
 				087BC4C42AE793B300AF725A /* AdSupport.framework in Frameworks */,
 				087BC4C22AE793AA00AF725A /* AppTrackingTransparency.framework in Frameworks */,
+<<<<<<< Updated upstream
 				087BC4C02AE7939900AF725A /* StoreKit.framework in Frameworks */,
 				08114D5B2AF1E72700C3ADAD /* EAccountApiSDK.framework in Frameworks */,
+=======
+>>>>>>> Stashed changes
 				087BC4BE2AE7939000AF725A /* iAd.framework in Frameworks */,
 				087BC4BC2AE7938600AF725A /* AdServices.framework in Frameworks */,
 				D69090A42AE3563900F7FE2E /* RxMoya in Frameworks */,
@@ -207,7 +208,6 @@
 				087BC4C52AE793BA00AF725A /* CoreTelephony.framework */,
 				087BC4C32AE793B300AF725A /* AdSupport.framework */,
 				087BC4C12AE793AA00AF725A /* AppTrackingTransparency.framework */,
-				087BC4BF2AE7939900AF725A /* StoreKit.framework */,
 				087BC4BD2AE7939000AF725A /* iAd.framework */,
 				087BC4BB2AE7938600AF725A /* AdServices.framework */,
 			);
@@ -615,7 +615,7 @@
 				CODE_SIGN_ENTITLEMENTS = FaceGuess/FaceGuess.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4V8M6B9A6S;
+				DEVELOPMENT_TEAM = 5FB435U38C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "脸猜";
@@ -659,7 +659,7 @@
 				CODE_SIGN_ENTITLEMENTS = FaceGuess/FaceGuess.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4V8M6B9A6S;
+				DEVELOPMENT_TEAM = 5FB435U38C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FaceGuess/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "脸猜";
